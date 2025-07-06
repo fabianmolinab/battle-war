@@ -24,7 +24,8 @@ describe("Unidades", () => {
         expect(calculo).toBeTypeOf("number");
     });
 
-    test("comprobar el calculo de vida maxima tome el valor inicial por el porcentaje", () => {
+    /*test('debería [acción/resultado esperado] cuando [condición/contexto]', () => {});*/
+    test("deberia calcular la vida maxima de un soldado regular 2500", () => {
         //Soldados Regulares
         let soldadosRegulares: Unidades;
         soldadosRegulares = new Unidades(2500, 2, 12);
@@ -35,11 +36,13 @@ describe("Unidades", () => {
         const respuesta: number = porcentaje * valorinicial;
 
         expect(soldadosRegulares.calculoVidaMaxima()).toBe(respuesta);
+    });
 
+    test("deberia calcular la vida maxima de un soldado regular 2500", () => {
         //Soldados Profesionales
-        let soldadoProfesional: Unidades = new Unidades(2500, 3, 12);
+        const soldadoProfesional: Unidades = new Unidades(2500, 3, 12);
         const procentajeProfesionales = 3 / 12;
-        let valorInicialProfesionales = 2500;
+        const valorInicialProfesionales = 2500;
 
         const respuestaSoldadosProfesionales: number =
             procentajeProfesionales * valorInicialProfesionales;

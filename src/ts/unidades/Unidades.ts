@@ -1,12 +1,12 @@
 export class Unidades {
     private vidaMaxima: number;
-    private valor1: number;
-    private valor2: number;
+    private valorPorcentajeVida1: number;
+    private valorPorcentajeVida2: number;
 
-    constructor(vidaMaxima: number, valor1: number, valor2: number) {
+    constructor(vidaMaxima: number, valorPorcentajeVida1: number, valorPorcentajeVida2: number) {
         this.vidaMaxima = vidaMaxima;
-        this.valor1 = valor1;
-        this.valor2 = valor2;
+        this.valorPorcentajeVida1 = valorPorcentajeVida1;
+        this.valorPorcentajeVida2 = valorPorcentajeVida2;
     }
 
     public get getVidaMaxima(): number {
@@ -18,7 +18,7 @@ export class Unidades {
     }
 
     calculoPorcentajeVidaUnidad(): number {
-        return this.valor1 / this.valor2;
+        return this.valorPorcentajeVida1 / this.valorPorcentajeVida2;
     }
 
     calculoVidaMaxima(): number {
