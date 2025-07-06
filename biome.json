@@ -1,0 +1,22 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+    "files": {
+        "includes": ["src/**/*.ts", "tests/**/*.ts"]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4
+    },
+    "javascript": {
+    "formatter": {
+        "semicolons": "always"
+    }
+  },
+    "linter": {
+        "enabled": true
+    },
+    "assist": {
+        "enabled": true
+    }
+}
