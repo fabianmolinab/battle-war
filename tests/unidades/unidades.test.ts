@@ -33,12 +33,10 @@ describe("Unidades", () => {
         test("deberia calcular la vida maxima de un soldado regular 2500", () => {
             let soldadosRegulares: Unidades;
             soldadosRegulares = new Unidades(2500, 500, 2, 12);
-
             const porcentaje = 2 / 12;
             const valorinicial = 2500;
 
             const respuesta: number = porcentaje * valorinicial;
-
             expect(soldadosRegulares.calculoVidaMaxima()).toBe(respuesta);
         });
 
@@ -46,7 +44,6 @@ describe("Unidades", () => {
             const soldadoProfesional: Unidades = new Unidades(2500, 500, 3, 12);
             const procentajeProfesionales = 3 / 12;
             const valorInicialProfesionales = 2500;
-
             const respuestaSoldadosProfesionales: number =
                 procentajeProfesionales * valorInicialProfesionales;
 
@@ -94,10 +91,9 @@ describe("Unidades", () => {
         });
 
         test("deberia calcular calculoAtaqueMaximo() el ataque Maximo de un soldado profesional que tiene como valor 2/14 como valor base aleatorio", () => {
-            let validarAtaque: Unidades = new Unidades(1, 1, 1, 1); //inicialización
+            let validarAtaque: Unidades = new Unidades(1, 1, 1, 1);
             let numeroBase: number = Math.random() * (500 - 1000) + 1000;
-            const calculo: number = (2 / 14) * numeroBase; //operación
-
+            const calculo: number = (2 / 14) * numeroBase;
             expect(validarAtaque.calculoAtaqueMaximo(numeroBase, 2, 14)).toBe(
                 calculo,
             );
